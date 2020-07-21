@@ -5,6 +5,8 @@ jobs:
   install:
     name: "Deno Install"
     runs-on: ubuntu-18.04
+    container:
+      image: centos:8
     steps:
       - uses: denolib/setup-deno@v2
         with:
