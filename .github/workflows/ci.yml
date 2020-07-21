@@ -1,0 +1,15 @@
+name: Deno Install Test
+on: [push]
+
+jobs:
+  install:
+    name: "Deno Install"
+    runs-on: ubuntu-18.04
+    steps:
+      - name: "Hello world"
+        uses: actions/hello-world-javascript-action@v1
+        with:
+          who-to-greet: "James"
+        id: hello
+      - name: Echo the greeting's time
+        run: echo 'The Time was ${{steps.hello.outputs.time}}.'
