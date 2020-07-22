@@ -10,11 +10,5 @@ jobs:
     steps:
       - run: dnf install -y unzip
       - run: curl -fsSL https://deno.land/x/install/install.sh | sh
-      - run: |
-          export DENO_INSTALL="/github/home/.deno"
-          export PATH="$DENO_INSTALL/bin:$PATH"
+      - run: ::add-path::/github/home/.deno
       - run: deno run https://deno.land/std/examples/welcome.ts
-      # - uses: denolib/setup-deno@v2
-        # with:
-          # deno-version: v1.x
-      # - run: deno --version
