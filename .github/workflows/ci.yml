@@ -8,7 +8,7 @@ jobs:
     container:
       image: centos:8
     steps:
-      - run: gzip --version
+      - run: whereis gzip
       # - uses: denolib/setup-deno@v2
         # with:
           # deno-version: v1.x
