@@ -8,6 +8,7 @@ jobs:
     container:
       image: centos:8
     steps:
+      - run: dnf install -y unzip
       - run: curl -fsSL https://deno.land/x/install/install.sh | sh
       # - uses: denolib/setup-deno@v2
         # with:
