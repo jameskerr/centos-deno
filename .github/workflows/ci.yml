@@ -8,13 +8,9 @@ jobs:
     container:
       image: centos:8
     steps:
-      - run: dnf install -y unzip
-      # - run: curl -fsSL https://deno.land/x/install/install.sh | sh
-      # - run: echo "::add-path::/github/home/.deno/bin"
-      # - run: echo $PATH
-      # - run: whereis deno
-      # - run: deno run https://deno.land/std/examples/welcome.ts
+      - run: dnf install -y unzip make
       - uses: denolib/setup-deno@v2
         with:
           deno-version: v1.x
       - run: deno --version
+      - run: make
