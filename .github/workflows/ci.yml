@@ -10,5 +10,5 @@ jobs:
     steps:
       - run: dnf install -y unzip
       - run: curl -fsSL https://deno.land/x/install/install.sh | sh
-      - run: ::add-path::/github/home/.deno
+      - run: echo '::add-path::/github/home/.deno'
       - run: deno run https://deno.land/std/examples/welcome.ts
