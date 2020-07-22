@@ -10,7 +10,7 @@ jobs:
     steps:
       - run: dnf install -y unzip
       - run: curl -fsSL https://deno.land/x/install/install.sh | sh
-      - run: echo "::add-path::/github/home/.deno"
+      - run: echo "::add-path::/github/home/.deno/bin"
       - run: echo $PATH
       - run: whereis deno
       - run: deno run https://deno.land/std/examples/welcome.ts
